@@ -1,4 +1,4 @@
-package com.jsf.clubnet;
+package com.jsf.clubnet.repo;
 
 import com.jsf.clubnet.model.Club;
 import org.bson.types.ObjectId;

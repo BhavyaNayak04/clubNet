@@ -30,7 +30,7 @@ export default function Home() {
                 <Link
                   href={`/clubs/${club.id}`}
                   key={club.id}
-                  className="text-justify"
+                  className="text-justify flex items-center flex-col justify-center space-y-5"
                 >
                   <Image
                     src={club.image}
@@ -38,9 +38,11 @@ export default function Home() {
                     width={200}
                     height={200}
                   />
-                  <h3 className="text-2xl">{club.name}</h3>
-                  <p>{club.description}</p>
-                  <p>{club.members.length} followers</p>
+                  <div>
+                    <h3 className="text-xl">{club.name}</h3>
+                    <p>{club.description}</p>
+                    <p>{club.members.length} followers</p>
+                  </div>
                 </Link>
               );
             })}
