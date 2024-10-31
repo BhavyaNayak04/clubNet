@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() {
+export default function Clubs() {
   const [clubs, setClubs] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
