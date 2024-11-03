@@ -18,7 +18,6 @@ export default function Events() {
   }, []);
   return (
     <div className="w-full h-full space-y-10">
-      <h3>Hi! see all the events here!</h3>
       <main className="w-full flex flex-col justify-center items-center space-y-10">
         {loading ? (
           <p>Loading...</p>
