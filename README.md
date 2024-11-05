@@ -95,19 +95,5 @@ The frontend will be running at http://localhost:3000
 3. Open your browser and navigate to http://localhost:3000
 
 
-## Viewing Clubs
-- Access the list of clubs at http://localhost:3000/clubs.
-- Click on a club to view its details.
-- 
-## Authentication
-- The application uses basic HTTP authentication.
-- Provide your username and password when prompted.
-  
-## Contributing
-- Fork the repository.
-- Create a new branch.
-- Make your changes.
-- Submit a pull request.
-
 Acknowledgements
 Thanks to the contributors of Spring Boot, Spring Security, React, and Next.js for their excellent frameworks and tools.
