@@ -3,6 +3,7 @@ package com.jsf.clubnet.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,10 +15,12 @@ import java.util.Date;
 @Data
 public class Event {
     @Id
-    private String event_id;
+    private String id;
     private String name;
-    private String description;
-    private Date date;
-    private String location;
     private String club_id;
+    private Date date;
+    private String description;
+    private Double fee;
+    private String venue;
+    private String Image;
 }

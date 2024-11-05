@@ -1,6 +1,6 @@
 package com.jsf.clubnet.service;
 
-import com.jsf.clubnet.ClubRepository;
+import com.jsf.clubnet.repo.ClubRepository;
 import com.jsf.clubnet.model.Club;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
