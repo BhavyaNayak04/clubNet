@@ -9,10 +9,33 @@ export default function Events() {
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true);
-      const response = await fetch("http://localhost:8080/api/events");
-      const events = await response.json();
-      setLoading(false);
-      setEvents(events);
+
+      const username = 'bhavya123'; // Replace with your actual username
+      const password = '0'; // Replace with your actual password
+      const credentials = btoa(`${username}:${password}`); // Encode credentials in Base64
+
+      try {
+        const response = await fetch("http://localhost:8080/api/events", {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Basic ${credentials}` // Set the Authorization header
+          },
+          credentials: 'include' // Include credentials if necessary
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setEvents(data);
+        console.log('Parsed data:', data);
+      } catch (error) {
+        console.error('Error fetching or parsing data:', error);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchEvents();
   }, []);
