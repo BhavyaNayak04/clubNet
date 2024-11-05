@@ -47,15 +47,29 @@ ClubNet is a web application for managing and viewing various clubs. It provides
    git clone https://github.com/your-username/clubnet.git
    cd clubnet
    
-2. Configure the database (if using a different database):
+2. Configure the database:
    Update src/main/resources/application.properties with your database configuration.
 
-3. Build the backend:
+   ```bash
+   spring.application.name=clubNet
+   spring.data.mongodb.database=${env.MONGO_DATABASE}
+   spring.data.mongodb.uri=mongodb+srv://${env.MONGO_USER}:${env.MONGO_PASSWORD}@${env.MONGO_CLUSTER}/?retryWrites=true&w=majority&appName=clubnet
+
+3. Create .env file with the following fields:
+
+  ```bash
+  MONGO_DATABASE=
+  MONGO_USER=
+  MONGO_PASSWORD=
+  MONGO_CLUSTER=
+  ```
+
+4. Build the backend:
 
    ```bash
    mvn clean install
 
-4. Run the backend:
+5. Run the backend:
    
    ```bash
    mvn spring-boot:run
