@@ -48,6 +48,7 @@ ClubNet is a web application for managing and viewing various clubs. It provides
    cd clubnet
    
 2. Configure the database:
+
    Update src/main/resources/application.properties with your database configuration.
 
    ```bash
@@ -58,10 +59,10 @@ ClubNet is a web application for managing and viewing various clubs. It provides
 3. Create .env file with the following fields:
 
   ```bash
-  MONGO_DATABASE=
-  MONGO_USER=
-  MONGO_PASSWORD=
-  MONGO_CLUSTER=
+    MONGO_DATABASE=
+    MONGO_USER=
+    MONGO_PASSWORD=
+    MONGO_CLUSTER=
   ```
 
 4. Build the backend:
