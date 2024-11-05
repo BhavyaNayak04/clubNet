@@ -30,8 +30,8 @@ export default function RootLayout({ children }) {
           </Link>
           <div className="flex flex-row space-between space-x-7">
             <Link href={`/clubs`}>Clubs</Link>
+            <Link href={`/events`}>Events</Link>
             <Link href={`/about`}>About</Link>
-            <Link href={`/contact`}>Contact</Link>
             <Link href={`/login`}>Login</Link>
           </div>
         </nav>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Home() {
+export default function Clubs() {
   const [clubs, setClubs] = useState([]);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function Home() {
                 <Link
                   href={`/clubs/${club.id}`}
                   key={club.id}
-                  className="text-justify"
+                  className="text-justify flex items-center flex-col justify-center space-y-5"
                 >
                   <Image
                     src={club.image}
@@ -38,9 +38,11 @@ export default function Home() {
                     width={200}
                     height={200}
                   />
-                  <h3 className="text-2xl">{club.name}</h3>
-                  <p>{club.description}</p>
-                  <p>{club.members.length} followers</p>
+                  <div>
+                    <h3 className="text-xl">{club.name}</h3>
+                    <p>{club.description}</p>
+                    <p>{club.members.length} followers</p>
+                  </div>
                 </Link>
               );
             })}
