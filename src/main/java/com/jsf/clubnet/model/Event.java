@@ -24,3 +24,4 @@ public class Event {
     private String venue;
     private String Image;
 }
+
